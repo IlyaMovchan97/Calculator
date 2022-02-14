@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme"
+        parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
+        <item name="colorAccent">@color/white</item>
+
+    </style>
+
+    <style name="NumbButtonStyle">
+
+        <item name="android:layout_width">@dimen/numbers_but_width</item>
+        <item name="android:layout_height">@dimen/numbers_but_height</item>
+        <item name="android:textColor">@color/but_num_colors</item>
+       <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@color/but_background_color</item>
+
+    </style>
+
+    <style name="OperationButtonStyle">
+
+        <item name="android:layout_width">@dimen/operations_but_width</item>
+        <item name="android:layout_height">@dimen/operations_but_height</item>
+        <item name="android:textColor">@color/but_operations_color</item>
+        <item name="android:textSize">@dimen/button_operation_textsize</item>
+        <item name="android:background">@color/but_operations_backgroung</item>
+    </style>
+
+    <style name="RightOperationButtonStyle">
+
+        <item name="android:layout_width">@dimen/numbers_but_width</item>
+        <item name="android:layout_height">@dimen/numbers_but_height</item>
+        <item name="android:textColor">@color/but_operations_color</item>
+        <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@color/but_operations_backgroung</item>
+    </style>
+
+    <style name="LayoutButtonStyle">
+
+        <item name="android:layout_width">@dimen/linear_layout_width</item>
+        <item name="android:layout_height">@dimen/linear_layout_height</item>
+       <item name="android:paddingStart">@dimen/linear_padding_start</item>
+        <item name="android:paddingEnd">@dimen/linear_padding_end</item>
+    </style>
+
+
+</resources>
