@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme"
+        parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
+        <item name="colorAccent">@color/white</item>
+
+    </style>
+
+    <style name="NumbButtonStyle">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/but_num_colors</item>
+       <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@color/but_background_color</item>
+
+    </style>
+
+    <!--
+  <item name="android:layout_width">@dimen/numbers_but_width</item>
+        <item name="android:layout_height">@dimen/numbers_but_height</item>
+        <item name="android:textColor">@color/but_num_colors</item>
+       <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@color/but_background_color</item>
+  -->
+
+    <style name="OperationButtonStyle">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/but_operations_color</item>
+        <item name="android:textSize">@dimen/button_operation_textsize</item>
+        <item name="android:background">@color/but_operations_backgroung</item>
+    </style>
+
+    <!--
+    <item name="android:layout_width">@dimen/operations_but_width</item>
+        <item name="android:layout_height">@dimen/operations_but_height</item>
+        <item name="android:textColor">@color/but_operations_color</item>
+        <item name="android:textSize">@dimen/button_operation_textsize</item>
+        <item name="android:background">@color/but_operations_backgroung</item>
+    -->
+
+    <style name="RightOperationButtonStyle">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/but_operations_color</item>
+        <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@color/but_operations_backgroung</item>
+    </style>
+
+    <!--
+    <item name="android:layout_width">@dimen/numbers_but_width</item>
+        <item name="android:layout_height">@dimen/numbers_but_height</item>
+        <item name="android:textColor">@color/but_operations_color</item>
+        <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@color/but_operations_backgroung</item>
+    -->
+
+    <style name="LayoutButtonStyle">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+       <item name="android:paddingStart">@dimen/linear_padding_start</item>
+        <item name="android:paddingEnd">@dimen/linear_padding_end</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--
+    <item name="android:layout_width">@dimen/linear_layout_width</item>
+        <item name="android:layout_height">@dimen/linear_layout_height</item>
+       <item name="android:paddingStart">@dimen/linear_padding_start</item>
+        <item name="android:paddingEnd">@dimen/linear_padding_end</item>
+    -->
+
+
+    <style name="TextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/textView_textSize</item>
+        <item name="android:textColor">@color/textWiew_color</item>
+        <item name="android:background">@color/text_view_background_color</item>
+    </style>
+
+    <style name="LinearLayoutCompatStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/linearLayoutCompat_background</item>
+        <item name="android:paddingLeft">@dimen/linearLayoutCompat_padding_left</item>
+        <item name="android:paddingTop">@dimen/linearLayoutCompat_padding_top</item>
+        <item name="android:paddingRight">@dimen/linearLayoutCompat_padding_right</item>
+
+    </style>
+
+    <style name="FrameLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">@dimen/frameLayout_paddingTop</item>
+
+    </style>
+
+
+</resources>

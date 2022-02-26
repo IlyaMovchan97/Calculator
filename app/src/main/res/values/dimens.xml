@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_textsize">50sp</dimen>
+    <dimen name="button_operation_textsize">35sp</dimen>
+    <dimen name="operations_but_height">75dp</dimen>
+    <dimen name="operations_but_width">90dp</dimen>
+    <dimen name="numbers_but_height">90dp</dimen>
+    <dimen name="numbers_but_width">90dp</dimen>
+    <dimen name="linear_padding_end">5dp</dimen>
+    <dimen name="linear_padding_start">5dp</dimen>
+    <dimen name="linear_layout_width">100dp</dimen>
+    <dimen name="linear_layout_height">440dp</dimen>
+    <dimen name="textView_textSize">50sp</dimen>
+    <dimen name="linearLayoutCompat_padding_left">10dp</dimen>
+    <dimen name="linearLayoutCompat_padding_top">250dp</dimen>
+    <dimen name="linearLayoutCompat_padding_right">10dp</dimen>
+    <dimen name="frameLayout_paddingTop">20dp</dimen>
+</resources>

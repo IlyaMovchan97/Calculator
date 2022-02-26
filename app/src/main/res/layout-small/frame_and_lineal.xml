@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="20dp">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF"
+        android:paddingLeft="10dp"
+        android:paddingTop="250dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_clean"
+                style="@style/OperationButtonStyle"
+                android:text="AC">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_7"
+                style="@style/NumbButtonStyle"
+                android:text="7">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_4"
+                style="@style/NumbButtonStyle"
+                android:text="4">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_1"
+                style="@style/NumbButtonStyle"
+                android:text="1">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_double_zero"
+                style="@style/NumbButtonStyle"
+                android:text="00">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_part"
+                style="@style/OperationButtonStyle"
+                android:text="%">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_8"
+                style="@style/NumbButtonStyle"
+                android:text="8">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_5"
+                style="@style/NumbButtonStyle"
+                android:text="5">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_2"
+                style="@style/NumbButtonStyle"
+                android:text="2">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_zero"
+                style="@style/NumbButtonStyle"
+                android:text="0">
+
+            </com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_mult"
+                style="@style/OperationButtonStyle"
+                android:text="*">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_9"
+                style="@style/NumbButtonStyle"
+                android:text="9">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_6"
+                style="@style/NumbButtonStyle"
+                android:text="6">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_3"
+                style="@style/NumbButtonStyle"
+                android:text="3">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_point"
+                style="@style/NumbButtonStyle"
+                android:text=".">
+
+            </com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_back"
+                style="@style/OperationButtonStyle"
+                android:text="←">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_share"
+                style="@style/RightOperationButtonStyle"
+                android:text="/">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_diff"
+                style="@style/RightOperationButtonStyle"
+                android:text="-">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/but_sum"
+                style="@style/RightOperationButtonStyle"
+                android:text="+">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/equally"
+                style="@style/RightOperationButtonStyle"
+                android:text="=">
+
+            </com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <TextView
+        android:id="@+id/numberField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:background="@android:color/white"
+        android:textSize="50sp"
+        android:layout_marginTop="70dp"
+        android:textColor="#000000"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/operationField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:background="@android:color/white"
+        android:textSize="50sp"
+        android:textColor="#000000"
+        >
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/resultField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="140dp"
+        android:background="@color/text_view_background_color"
+        android:backgroundTint="@android:color/white"
+        android:textSize="60sp"
+        android:textColor="#000000">
+
+    </TextView>
+
+
+
+
+</FrameLayout>
