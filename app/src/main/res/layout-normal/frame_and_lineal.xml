@@ -2,14 +2,24 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/FrameLayoutStyle">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="20dp">
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        style="@style/LinearLayoutCompatStyle">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF"
+        android:paddingLeft="10dp"
+        android:paddingTop="250dp"
+        android:paddingRight="10dp">
 
         <LinearLayout
-            style="@style/LayoutButtonStyle">
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
 
 
             <com.google.android.material.button.MaterialButton
@@ -52,7 +62,8 @@
 
 
         <LinearLayout
-            style="@style/LayoutButtonStyle">
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
 
 
             <com.google.android.material.button.MaterialButton
@@ -93,7 +104,8 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/LayoutButtonStyle">
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/but_mult"
@@ -133,7 +145,8 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/LayoutButtonStyle">
+            style="@style/LayoutButtonStyle"
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/but_back"
@@ -179,15 +192,25 @@
 
     <TextView
         android:id="@+id/numberField"
-       style="@style/TextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:background="@android:color/white"
+        android:textSize="50sp"
         android:layout_marginTop="70dp"
+        android:textColor="#000000"
         >
 
     </TextView>
 
     <TextView
         android:id="@+id/operationField"
-        style="@style/TextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:background="@android:color/white"
+        android:textSize="50sp"
+        android:textColor="#000000"
         >
 
     </TextView>
@@ -195,8 +218,14 @@
 
     <TextView
         android:id="@+id/resultField"
-        style="@style/TextViewStyle"
-        android:layout_marginTop="140dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="140dp"
+        android:background="@color/text_view_background_color"
+        android:backgroundTint="@android:color/white"
+        android:textSize="60sp"
+        android:textColor="#000000">
 
     </TextView>
 

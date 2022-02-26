@@ -12,5 +12,7 @@
     <color name="but_background_color">#00000000</color>
     <color name="but_operations_backgroung">#00000000</color>
     <color name="text_view_background_color">#FFFFFF</color>
+    <color name="textWiew_color">#000000</color>
+    <color name="linearLayoutCompat_background">#EFEFEF</color>
 
 </resources>

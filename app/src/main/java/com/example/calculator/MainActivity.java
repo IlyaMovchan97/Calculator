@@ -2,27 +2,26 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private double valueOne = Double.NaN;
-    private double valueTwo;
 
     private static final char SUM = '+';
     private static final char DIFFERENCE = '-';
     private static final char MULTIPLY = '*';
     private static final char SHARE = '/';
+    private static final char PERCENT = '%';
     private char CURRENT_ACTION;
 
 
-
-    private TextView window, signbox;
-    private TextView edit_text;
+    private TextView resultField; //Окно вывода результата
+    private TextView numberField; // Окно ввода чисел
+    private TextView operationField; // Окно ввода знаков
 
     private Button but_zero;
     private Button but_double_zero;
@@ -35,28 +34,89 @@ public class MainActivity extends AppCompatActivity {
     private Button but_7;
     private Button but_8;
     private Button but_9;
-    private Button but_point;
 
     private Button but_clean;
     private Button but_part;
     private Button but_mult;
-    private Button but_back;
     private Button but_share;
     private Button but_diff;
     private Button but_sum;
+    private Button but_point;
+    private Button but_back;
+    private Button but_equally;
 
 
 
+    private void computeCalculation(){
+        Double num_1 = Double.parseDouble(numberField.getText().toString());
+        Double num_2 = Double.parseDouble(operationField.getText().toString());
+
+        if (CURRENT_ACTION == SUM){
+            double Result = num_2 + num_1;
+            String Res = (Result + "");
+            resultField.setText(Res);
+
+        } else if (CURRENT_ACTION == DIFFERENCE){
+            double Result = num_2 - num_1;
+            String Res = (Result + "");
+            resultField.setText(Res);
+
+        } else if (CURRENT_ACTION == MULTIPLY){
+            double Result = num_2 * num_1;
+            String Res = (Result + "");
+            resultField.setText(Res);
+
+        } else if (CURRENT_ACTION == SHARE){
+            double Result = num_2 / num_1;
+                String Res = (Result + "");
+                resultField.setText(Res);
+
+            if (num_1 == 0){
+                resultField.setText("err");
+            }
+        }
+
+    }
+
+    private void procentClick(){
+        Double num_1 = Double.parseDouble(numberField.getText().toString());
+        if (CURRENT_ACTION == PERCENT){
+            double Result = num_1 / 100;
+            String Res = (Result + "");
+            resultField.setText(Res);
+        }
+    }
+
+    private void backPoint(){
+        String back = numberField.getText().toString();
+       numberField.setText(back.substring(0,back.length() -1));
+       // numberField.setText(back);
+    }
+    
+
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         setContentView(R.layout.frame_and_lineal);
 
-        window = findViewById(R.id.window);
-        signbox = findViewById(R.id.window);
-        edit_text = findViewById(R.id.edit_text);
 
 
+
+
+        /**
+         * Текстовые поля
+         */
+        resultField = findViewById(R.id.resultField);
+        operationField = findViewById(R.id.operationField);
+        numberField= findViewById(R.id.numberField);
+
+
+        /**
+         * Кнопки ввода
+         */
 
         but_zero = findViewById(R.id.but_zero);
         but_double_zero = findViewById(R.id.but_double_zero);
@@ -71,6 +131,11 @@ public class MainActivity extends AppCompatActivity {
         but_9 = findViewById(R.id.but_9);
         but_point = findViewById(R.id.but_point);
 
+
+        /**
+         * Кнопки опараторов
+         */
+
         but_clean = findViewById(R.id.but_clean);
         but_part = findViewById(R.id.but_part);
         but_mult = findViewById(R.id.but_mult);
@@ -78,62 +143,72 @@ public class MainActivity extends AppCompatActivity {
         but_share = findViewById(R.id.but_share);
         but_diff = findViewById(R.id.but_diff);
         but_sum = findViewById(R.id.but_sum);
+        but_equally = findViewById(R.id.equally);
 
 
+        /**
+         * Обработка кнопок ввода
+         */
 
         but_zero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "0");
+                if (numberField.getText() == null) {
+                    numberField.setText(numberField.getText() +"0" + ".");
+                } else {
+
+                    numberField.setText(numberField.getText() + "0");
+
+                }
             }
         });
 
         but_double_zero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "00");
+                numberField.setText(numberField.getText() + "00");
             }
         });
 
         but_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "1");
+                numberField.setText(numberField.getText() + "1");
             }
         });
 
         but_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "2");
+                numberField.setText(numberField.getText() + "2");
             }
         });
 
         but_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "3");
+                numberField.setText(numberField.getText() + "3");
             }
         });
 
         but_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "4");
+                numberField.setText(numberField.getText() + "4");
             }
         });
 
         but_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "5");
+                numberField.setText(numberField.getText() + "5");
             }
         });
 
         but_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "6");
+                numberField.setText(numberField.getText() + "6");
             }
         });
 
@@ -141,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
         but_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "7");
+                numberField.setText(numberField.getText() + "7");
             }
         });
 
@@ -149,161 +224,108 @@ public class MainActivity extends AppCompatActivity {
         but_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "8");
+                numberField.setText(numberField.getText() + "8");
             }
         });
 
         but_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "9");
+                numberField.setText(numberField.getText() + "9");
             }
         });
 
+
         /**
-         * Обработка кнопок операций:
+         * Обработка кнопок операторов:
          */
 
         but_point.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                /*
-                String text = (String) window.getText();
-
-                window.getText();
-
-                void IsNotEmpty (String text){
-                  return;
-                };
-
-                if (window.getText().) {
-
-                 */
-                    window.setText(window.getText() + ".");
-                }
+                numberField.setText(numberField.getText() + ".");
+            }
         });
 
 
         but_clean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText("");
-                edit_text.setText("");
+                operationField.setText("");
+                numberField.setText("");
+                resultField.setText("");
             }
         });
 
         but_part.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "%");
+                CURRENT_ACTION = PERCENT;
+                procentClick();
             }
         });
 
         but_mult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String a;
-                window.setText(a = window.getText() + "*");
-                String b;
-
-                /*
-                int d = Integer.parseInt(a);
-                int e = Integer.parseInt(b);
-                int c = d * e;
-                edit_text.setText(c);
-
-                 */
-
+                //computeCalculation();
+                CURRENT_ACTION = MULTIPLY;
+                operationField.setText(numberField.getText());
+                numberField.setText("");
             }
         });
 
         but_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                window.setText("");
-                edit_text.setText("");
-
-                /*
-                String a;
-                String b;
-                window.setText(a= (String) window.getText());
-                b=a.substring(-1);
-                window.setText(window.getText(a.substring(0, b.length(1,))));
-
-                 */
-
+                backPoint();
             }
         });
 
         but_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "/");
+                //computeCalculation();
+                CURRENT_ACTION = SHARE;
+                operationField.setText(numberField.getText());
+                numberField.setText("");
             }
         });
 
         but_diff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "-");
+                //  computeCalculation();
+                CURRENT_ACTION = DIFFERENCE;
+                operationField.setText(numberField.getText());
+                numberField.setText("");
             }
         });
 
         but_sum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                window.setText(window.getText() + "+");
+                CURRENT_ACTION = SUM;
+                operationField.setText(numberField.getText());
+                numberField.setText("");
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-        /*
-         but_6.setOnClickListener(new View.OnClickListener() {
+        but_equally.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String a = window.get;
-                window.setText(a);
-                //window.setText(window.getText() + "5");
-               // window.setText((window.setText() * ;));
-            }
-        });
-         */
+
+                computeCalculation();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      /*  Object binding;
-        binding.buttonZero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                binding.editText.setText(binding.editText.getText() + "0");
             }
         });
 
-       */
+
+
+
+
+
 
     }
 }
