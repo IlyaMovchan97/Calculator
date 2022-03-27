@@ -19,7 +19,7 @@ import com.example.calculator.ui.EditNoteActivity;
 public class NotesListActivity extends AppCompatActivity implements NotesAdapter.OnNoteClickListener {
 
     /*
-    1. Переименновываем "MainActivity" в "NotesListActivity"
+    1. Переименновываем "MainActivity" в "NotesListActivity".
     2. Переименновываем ее "activity_main" в "activity_notes_list.xml"
 
     3. Создаем пакеты "data" - для файлов, и  "ui" - для отображения контента
